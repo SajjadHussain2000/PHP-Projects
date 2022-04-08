@@ -1,9 +1,24 @@
 <?php
+
+session_start();
 require_once('php/CreateDb.php');
 require_once('./php/component.php');
 
 //creating instance of CreateDb class
 $database = new CreateDb("ProductDb","producttb");
+if(isset($_POST['add'])){
+    //print_r($_POST['product_id']);
+    if(isset($_SESSION['cart']))
+    {
+        print_r($_SESSION['cart']); 
+    }else{
+        $item_array = array(
+            'product_id'=>$_POST['product_id']
+        );
+        $_SESSION['cart'][0] = $item_array;
+        print_r($_SESSION['cart']);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +39,7 @@ $database = new CreateDb("ProductDb","producttb");
        <?php
         $result = $database->getData();
         while($row=mysqli_fetch_assoc($result)){
-            component($row['product_name'],$row['product_price'],$row['product_image']);
+            component($row['product_name'],$row['product_price'],$row['product_image'],$row['id']);
         }
        ?>
     </div>
