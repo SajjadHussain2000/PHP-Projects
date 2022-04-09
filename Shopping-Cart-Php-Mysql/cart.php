@@ -6,7 +6,18 @@
     $db = new CreateDb("Productdb","Producttb");
 
     if(isset($_POST['remove'])){
-        print_r($_GET['id']);
+        if($_GET['action']=='remove')
+        {
+            foreach($_SESSION['cart'] as $Key=>$value)
+            {
+                if($value['product_id']==$_GET['id'])
+                {
+                    unset($_SESSION['cart'][$Key]);
+                    echo "<script>alert('Product has been Removed')</script>";
+                    echo "<script>window.location='cart.php'</script>";
+                }
+            }
+        }
     }
 ?>
 
