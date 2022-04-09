@@ -11,7 +11,7 @@
         aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse pl-10" id="navbarNavAltMarkup">
             <div class="mr-auto"></div>
             <div class="navbar-nav">
                 <a href="cart.php" class="nav-item nav-link active">
