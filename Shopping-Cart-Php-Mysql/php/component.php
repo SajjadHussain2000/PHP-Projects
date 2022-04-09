@@ -36,11 +36,11 @@ function component($productname,$productprice,$productimg,$productid){
 }
 
 
-function cartElement($productimg,$productname,$productprice)
+function cartElement($productimg,$productname,$productprice,$productid)
 {
     $element = "
     
-    <form action=\"cart.php\" method=\"get\" class=\"cart-items\">
+    <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" class=\"cart-items\">
                 <div class=\"border rounded\">
                     <div class=\"row bg-white\">
                         <div class=\"col-md-3\">
