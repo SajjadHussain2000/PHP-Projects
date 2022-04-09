@@ -17,6 +17,19 @@ img{
     border-radius: 3rem;
 }
 
+/* .navbar-nav{
+    margin-left: 30rem;
+} */
+
+.navCust{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: 55rem;
+}
+
 .shopping-cart{
     padding: 3% 0;
 }

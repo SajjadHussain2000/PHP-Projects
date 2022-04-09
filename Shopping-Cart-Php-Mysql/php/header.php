@@ -13,7 +13,7 @@
         </button>
         <div class="collapse navbar-collapse pl-10" id="navbarNavAltMarkup">
             <div class="mr-auto"></div>
-            <div class="navbar-nav">
+            <div class="navCust">
                 <a href="cart.php" class="nav-item nav-link active">
                     <h5 class="px-5 cart">
                         <i class="fas fa-shopping-cart"></i>  Cart 
